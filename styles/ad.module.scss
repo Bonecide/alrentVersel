@@ -1,0 +1,116 @@
+@import './global.scss';
+.MainInfo {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  @include mobile {
+    display:none
+  }
+
+}
+
+.attributes {
+  display : flex;
+  flex-direction: column;
+
+  .attribute {
+    display : flex;
+    gap : 10px;
+    .title {
+      font-weight : 700;
+    }
+  }
+}
+.carousel {
+
+  .subTitle {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    padding: 20px 0;
+  }
+}
+
+.stars {
+  display: flex;
+  gap: 5px;
+  margin: 10px 30px;
+  align-items: center;
+
+  .like {
+    margin-left: auto;
+  }
+}
+
+.mainTextContent {
+  margin-top: 66px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 395px;
+  //max-width: 393px;
+
+  .mainTitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+  }
+
+  .mainPrice {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2C52A5;
+  }
+
+  .mainText {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #000000;
+
+    span {
+      font-weight: 700;
+
+    }
+  }
+}
+
+.map{
+
+}
+
+.chat{
+
+}
+
+.mainCarousel{
+  margin-bottom: 40px;
+  .title{
+    padding: 20px 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1{
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #2C52A5;
+
+    }
+
+    a{
+      margin-left: auto;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #2C52A5;
+    }
+  }
+}

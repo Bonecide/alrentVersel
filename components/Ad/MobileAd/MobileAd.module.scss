@@ -1,0 +1,97 @@
+@import '../../../styles/global.scss';
+.mobileAdContainer {
+    display: none;
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+    .carousel {
+        margin-top: 50px;
+        
+    }
+    .mainTextContent {
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        .mainTitle {
+            font-size:20px;
+            font-weight:700;
+        }
+        .mainPrice {
+            font-size:20px;
+            color:#2C52A5;
+            font-weight:700;
+
+        }
+        .mainText {
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+    .attributes {
+        display : flex;
+        flex-direction: column;
+      
+        .attribute {
+          display : flex;
+          gap : 10px;
+          .title {
+            font-weight : 700;
+          }
+        }
+      }
+    .owner {
+        margin-top:50px;
+        width:100%;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        .ownerAvatar {
+            display:flex;
+            align-items:center;
+            gap:10px;
+
+            img {
+                width:60px;
+                height : 60px;
+                overflow:hidden;
+                border-radius : 50%;
+                object-fit:cover;
+            }
+            div {
+                display:flex;
+                flex-direction:column;
+                gap:5px;
+                h5 {
+                    margin:0;
+                    padding:0;
+                    font-size:14px;
+                    color:#2C52A5;
+                }
+                p {
+                    margin:0;
+                    padding:0;
+                }
+            }
+
+        }
+        .buttons {
+            display:flex;
+            flex-direction:column;
+            gap:10px;   
+            button {
+                padding:6px 24px;
+                border:none;
+                color:white;
+                cursor:pointer;
+            }
+            .write {
+                background: #FFB800;
+            }
+            .phone {
+                background: #05FF00;
+            }
+        }
+    }
+}

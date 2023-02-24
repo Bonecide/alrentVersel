@@ -1,0 +1,54 @@
+@import './global.scss';
+.banners {
+  margin-top: 200px;
+  @include mobile {
+    margin-top: 240px;
+  }
+
+}
+
+.wrap {
+  display: flex;
+  gap: 25px;
+  height: 311px;
+  @include mobile {
+    flex-direction: column;
+    height:auto;
+    width: 100%;
+    overflow-x: scroll;
+    gap:15px;
+  }
+}
+
+.bigImg {
+  flex: 2;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+
+  }
+}
+
+.miniImg {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include mobile {
+    flex-direction: row;
+    gap: 15px;
+  }
+  img {
+    width: 100%;
+    height: 46.7%;
+    object-fit: cover;
+    cursor: pointer;
+    @include mobile {
+      width: 47.5%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}

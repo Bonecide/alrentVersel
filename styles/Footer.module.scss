@@ -1,0 +1,45 @@
+@import './global.scss';
+.footer {
+  background-color: #2C52A5;
+  padding: 50px 0;
+  @include mobile {
+    display:none;
+  }
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .columnItem{
+      font-family: 'Quicksand', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 187%;
+      text-transform: uppercase;
+      color: #FFFFFF;
+    }
+
+    .columnSubItem{
+      font-family: 'Quicksand', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.year{
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+  font-size: 16px;
+}

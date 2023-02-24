@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  frontend:
+    hostname: frontend_alrent
+    restart: always
+    image: cr.yandex/crpb8ln948shlo9fq8ts/next/alrent-front:latest
+    networks:
+      - alrent_net
+
+networks:
+  alrent_net:
+    external: true

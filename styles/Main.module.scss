@@ -1,0 +1,57 @@
+@import './global.scss';    
+.main {
+  min-height: 100vh;
+
+}
+
+.offer {
+  background: url("../public/mainImg.png") no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  width: 100%;
+  height: 550px;
+  padding-top: 100px;
+  @include mobile {
+    background: url('../public/mainImgMobile.png') no-repeat;
+    height : 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: 60%;
+    padding-top: 13px;
+  }
+}
+
+.logo {
+  padding: 0 10px 80px 0;
+  @include mobile {
+    padding: 0;
+    img {
+      width:77px;
+      height : 80px;
+    }
+  }
+}
+
+
+
+.itemTitle{
+  display: flex;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #2C52A5;
+  padding: 40px 0 40px 50px;
+}
+
+.more{
+  margin-left: auto;
+  margin-right: 50px;
+  font-weight: 500;
+
+}
+
+.carousel:last-child{
+  margin-bottom: 40px;
+}
+

@@ -1,0 +1,31 @@
+@import './global.scss';
+
+.container {
+    box-shadow: 0px -4px 4px 0px #00000040;
+    position:fixed;
+    bottom:0;
+    display:  none;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    background: white;
+    padding:4px 0;
+    @include mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+    }
+    .add {
+       padding: 11px;
+       width: 42px;
+       height: 42px;
+       border-radius: 50%;
+       background: #5855EE;
+    }
+
+    img {
+        cursor: pointer;
+
+    }
+}

@@ -1,0 +1,36 @@
+@import './global.scss';
+.mainImg{
+  display: flex;
+  justify-content: center;
+  @include mobile {
+    width:100%;
+  }
+  img{
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+  }
+
+
+}
+.NONMOBILE {
+@include mobile {
+  display:none;
+}
+}
+
+.secondImg{
+  display: flex;
+  justify-content: center;
+  img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.slideContainer {
+   
+  @include mobile {
+    width:100% !important;
+  }
+}

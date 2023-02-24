@@ -1,0 +1,22 @@
+options:
+  docker: true
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name:  Next.js With Docker - Build | Pus
+          image: docker:stable
+          script:
+            - docker build . --no-cache -t analyst -t cr.yandex/crpb8ln948shlo9fq8ts/next/alrent-front:latest -f ./Dockerfile
+            - cat authorized_key.json | docker login --username json_key --password-stdin cr.yandex
+            - docker push cr.yandex/crpb8ln948shlo9fq8ts/next/alrent-front:latest
+      - step:
+          name: Deploy to Web
+          image: alpine
+          deployment: production
+          script:
+            - apk update && apk add openssh rsync
+            - rsync -a  -e "ssh -o StrictHostKeyChecking=no -p 49491" --delete docker-compose.yml $USERNAME@$SERVER:/home/www/alrent_front/
+            - rsync -a  -e "ssh -o StrictHostKeyChecking=no -p 49491" --delete start.sh $USERNAME@$SERVER:/home/www/alrent_front/
+            - ssh -o StrictHostKeyChecking=no -p 49491 $USERNAME@$SERVER "cd /home/www/alrent_front/ && sh ./start.sh"

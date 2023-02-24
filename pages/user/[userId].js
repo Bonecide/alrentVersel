@@ -79,7 +79,7 @@ const index = ({user, userAdverts}) => {
 index.getInitialProps = async ({req, query}) => {
     const cookies = cookie.parse(req ? req.headers.cookie || '' : document.cookie);
     const token = cookies.access;
-    
+
 
     const config = {
         headers: {Authorization: `Bearer ${token}`}
